@@ -37,6 +37,13 @@
 					</div>
 				</div>
 			</div>
+			<div>
+				<br>
+				<p>Понравилось: {{ post.like_set.all.count }}</p>
+				<br>
+				<a href="{% url 'add_like' post.id %}">Нравится</a>
+				<a href="{% url 'del_like' post.id %}">Не нравится</a>
+			</div>
 			<div class="form-comment">
 				<h3>Оставить комментарий</h3>
 				<div>
